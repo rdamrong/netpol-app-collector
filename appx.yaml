@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: appx
+...
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  namespace: appx
+spec:
+  containers:
+  - name: myapp
+    image: damrongsak/curl
+    command: ["/bin/sh"]
+    args: ["-c", "sleep 20000"]
+...
